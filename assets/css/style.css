@@ -68,6 +68,7 @@ body {
 a,
 a:hover {
   text-decoration: none;
+  color: rgba(33,37,41, var(--bs-text-opacity)) !important;
 }
 
 .text-primary {
