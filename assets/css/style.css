@@ -19,6 +19,25 @@
   --font-semibold: 600;
   --font-medium: 500;
 }
+/* Oculta no PC */
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+/* No PC, exibir o layout empilhado */
+@media (min-width: 992px) {
+  .mobile-only {
+      display: none;
+  }
+
+  .desktop-only {
+      display: block;
+  }
+}
 
 body {
   font-family: var(--body-font);
@@ -206,27 +225,102 @@ section.services {
 section.services .content .services-title {
   font-weight: var(--font-semibold);
 }
+/* Oculta a versão para PC no celular */
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+/* Exibe a versão para PC e oculta a mobile */
+@media (min-width: 992px) {
+  .mobile-only {
+      display: none;
+  }
+
+  .desktop-only {
+      display: block;
+  }
+}
+@media (max-width: 991px) {
+  .card-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Alinha conteúdo à esquerda */
+      text-align: left;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      max-width: 90%;
+      margin: 0 auto 20px auto; /* Centraliza e espaça os cards */
+      background: #fff;
+  }
+
+  .card-menu img {
+      width: 100%; /* Faz a imagem ocupar toda a largura */
+      max-width: 400px; /* Mantém um tamanho adequado */
+      height: auto;
+      border-radius: 10px;
+      align-self: center; /* Centraliza a imagem */
+  }
+
+  .menu-title {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left; /* Garante que o título fique à esquerda */
+      margin-top: 15px;
+  }
+
+  .card-menu p {
+      text-align: left; /* Garante que o texto fique alinhado à esquerda */
+      font-size: 16px;
+      padding: 0;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      width: 100%; /* Evita que o texto fique desalinhado */
+  }
+}
+
+/* Ajuste fino para telas entre 460px e 991px */
+@media (min-width: 460px) and (max-width: 991px) {
+  .card-menu {
+      padding: 25px;
+      max-width: 600px; /* Impede que o card estique demais */
+  }
+
+  .card-menu img {
+      max-width: 100%; /* Mantém imagem ajustável */
+  }
+}
+
+/* Ajustes gerais */
 .card-menu {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
+
 .card-menu:hover {
   transform: scale(1.03);
 }
+
 .card-img {
-  width: 150px; /* Mantém a imagem menor */
+  width: 150px;
   height: auto;
   border-radius: 5px;
 }
+
 .menu-title {
-  text-align: left; /* Alinha o título à esquerda */
-  margin-bottom: 10px; /* Dá espaço entre o título e o texto */
+  text-align: left;
+  margin-bottom: 10px;
 }
+
+
+
+
 
 /* About */
 section.about {
