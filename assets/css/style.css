@@ -68,10 +68,15 @@ body {
 a,
 a:hover {
   text-decoration: none;
+  color: white !important;
+  -webkit-tap-highlight-color: transparent; /* Remove o efeito azul no iOS */
+  -webkit-focus-ring-color: transparent; /* Remove o anel de foco no Chrome */
  
 }
 
 a:visited, a:focus, a:active {
+  -webkit-tap-highlight-color: transparent; /* Remove o efeito azul no iOS */
+  -webkit-focus-ring-color: transparent; /* Remove o anel de foco no Chrome */
   color: white !important;
   outline: none; /* Remove a borda de foco */
 }
