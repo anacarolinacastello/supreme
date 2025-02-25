@@ -68,8 +68,15 @@ body {
 a,
 a:hover {
   text-decoration: none;
-  color: rgba(33,37,41, var(--bs-text-opacity)) !important;
+ 
 }
+
+a:visited, a:focus, a:active {
+  color: white !important;
+  outline: none; /* Remove a borda de foco */
+}
+
+
 
 .text-primary {
   color: var(--primary-color) !important;
